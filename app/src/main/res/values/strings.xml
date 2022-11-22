@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">devhouse_counterApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="input_firstName">First name</string>
+    <string name="input_lastName">Last Name</string>
+    <string name="goNext">Go next</string>
+    <string name="hint_last_name">Last name</string>
+    <string name="hint_first_name">First name</string>
+    <string name="btn_finish_counting">Finish counting</string>
+    <string name="btn_countPlus">Count +1</string>
+    <string name="btn_main_page">Main Page</string>
+    <string name="btn_continue_counting">Continue Counting</string>
+    <string name="btn_choose_avatar">Choose avatar</string>
+
+</resources>

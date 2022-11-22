@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navi"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.devhouse_counterapp.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_counterFragment"
+            app:destination="@id/counterFragment" >
+            <argument
+                android:name="name_first" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/counterFragment"
+        android:name="com.example.devhouse_counterapp.CounterFragment"
+        android:label="CounterFragment"
+        tools:layout="@layout/fragment_counter">
+        <argument android:name="name_first"
+            app:argType="string" />
+        <argument android:name="name_second"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_counterFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <argument android:name="counterAmount"
+            app:argType="integer" />
+        <argument
+            android:name="gayPhoto"
+            app:argType="android.net.Uri" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.devhouse_counterapp.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <argument
+            android:name="firstName"
+            app:argType="string" />
+        <argument
+            android:name="lastName"
+            app:argType="string" />
+        <argument
+            android:name="counterNumber"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_profileFragment_to_counterFragment"
+            app:destination="@id/counterFragment"
+            app:popUpTo="@id/counterFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="gayPhoto"
+            app:argType="android.net.Uri" />
+    </fragment>
+</navigation>
